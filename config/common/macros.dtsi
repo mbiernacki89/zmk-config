@@ -1,0 +1,199 @@
+/ {
+    macros {
+        // SYSTEM
+        terminal: terminal {
+            label = "ZM_terminal";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp NUBS>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        scrnshot: scrnshot {
+            label = "ZM_scrnshot";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp N3>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        cutshot: cutshot {
+            label = "ZM_cutshot";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp N4>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        // ANDROID STUDIO
+        a_run: a_run {
+            label = "ZM_as_run";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp R>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        a_debug: a_debug {
+            label = "ZM_as_debug";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        a_action: a_action {
+            label = "ZM_as_actions";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        a_file: a_file {
+            label = "ZM_as_files";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp O>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        a_class: a_class {
+            label = "ZM_as_classes";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp O>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        a_sh: a_sh {
+            label = "ZM_as_split_horizontally";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp MINUS>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        a_sv: a_sv {
+            label = "ZM_as_split_vertically";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp BSLH>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        a_recent: a_recent {
+            label = "ZM_as_recent";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp E>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        a_ftree: a_ftree {
+            label = "ZM_as_project_structure";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp N1>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        a_logc: a_logc {
+            label = "ZM_as_logcat";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp N6>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        a_logd: a_logd {
+            label = "ZM_as_debug_log";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp N5>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        a_term: a_term {
+            label = "ZM_as_terminal";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp F12>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        a_pfile: a_pfile {
+            label = "ZM_as_previous_file";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp LBKT>
+                , <&macro_release &kp LGUI>
+                ;
+                
+        };
+        a_nfile: a_nfile {
+            label = "ZM_as_next_file";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp RBKT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        a_usage: a_usage {
+            label = "ZM_as_next_file";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp F7>
+                , <&macro_release &kp LALT>
+                ;
+        };
+    };
+};
