@@ -104,13 +104,13 @@
             bindings = <
             /*╭───────╭───────────┬───────────┬───────────┬───────────┬───────────╮                           ╭───────────┬───────────┬───────────┬───────────┬───────────╮───────╮*/
             /*│       │           │           │           │           │           │                           │           │           │           │           │           │       │*/
-                &none   BRI_DN      BRI_UP       VOL_DN      VOL_UP     MUTE      /*                         */ &none       &a_run      &a_debug    &none       &a_sh       &none
+                &none   BRI_DN      BRI_UP       VOL_DN      VOL_UP     MUTE      /*                         */ &a_ftree    &a_logc     &a_logd     &a_usage    &a_term     &none
             /*┼───────├───────────├───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┤───────┤*/
             /*│       │           │           │           │           │           │                           │           │           │           │           │           │       │*/
-                &none   &none       &kp C_PREV  &kp C_PP    &kp C_NEXT  &none     /*                         */ &a_recent   &a_pfile    &a_nfile    &none       &a_sv       &none
+                &none   &none       &kp C_PREV  &kp C_PP    &kp C_NEXT  &none     /*                         */ &a_sh       &a_run      &a_debug    &none       &none       &none
             /*┼───────├───────────┼───────────┼───────────┼───────────├───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┤───────┤*/
             /*│       │           │           │           │           │           │                           │           │           │           │           │           │       │*/
-                &none   &none       &bt BT_PRV  &bt BT_NXT  &bt BT_CLR  &none     /*                         */ &a_term     &a_ftree    &a_logc     &a_logd     &a_usage    &none
+                &none   &none       &bt BT_PRV  &bt BT_NXT  &bt BT_CLR  &none     /*                         */ &a_sv       &a_recent   &a_nfile    &a_pfile    &none       &none
             /*╰───────╰───────────┴───────────┼───────────┼───────────┼───────────┼───────────╮   ╭───────────┼───────────┼───────────┼───────────┼───────────┴───────────╯───────╯*/
             /*                                            │           │           │           │   │           │           │           │                                            */
                                                             &none       &none       &none     /* */ &a_action   &a_file     &a_class
