@@ -1,5 +1,4 @@
-/*                KEY POSITIONS
-
+/*
   ╭────────────────────────╮ ╭────────────────────────╮
   │  0   1   2   3   4   5 │ │  6   7   8   9  10  11 │
   │ 12  13  14  15  16  17 │ │ 18  19  20  21  22  23 │
@@ -17,6 +16,31 @@
 
 / {
     combos {
-        // no combos :)
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <4 5>;
+            bindings = <&kp ESC>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp TAB>;
+        };
+        combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp BSPC>;
+        };
+        combo_ret {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp RET>;
+        };
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <39 40>;
+            bindings = <&kp DEL>;
+        };
     };
 };
