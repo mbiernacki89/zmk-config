@@ -8,17 +8,6 @@
 #define NAV 2
 #define SYS 3
 #define FUN 4
-#define CDH 5
-
-#define QUICK_TAP_MS 160 // tapping twice quickly and holding on the second tap sends key repeat
-
-// Define explicit momentary toggle instead of using defaults: https://zmk.dev/docs/behaviors/layers#layer-tap
-&lt {
-    flavor = "balanced";
-    tapping_term_ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-};
-
 
 #include "common/behaviors.dtsi"
 #include "common/macros.dtsi"
