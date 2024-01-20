@@ -1,3 +1,5 @@
+#include <dt-bindings/zmk/keys.h>
+
 / {
     macros {
         // CURRENCIES
@@ -32,6 +34,18 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
+        terminal2: terminal2 {
+            label = "ZM_terminal2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp NUBS>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
         scrnshot: scrnshot {
             label = "ZM_scrnshot";
             compatible = "zmk,behavior-macro";
@@ -44,8 +58,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        cutshot: cutshot {
-            label = "ZM_cutshot";
+        scrncut: scrncut {
+            label = "ZM_scrncut";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
