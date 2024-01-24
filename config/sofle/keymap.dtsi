@@ -1,3 +1,5 @@
+#define SER(k1) &lt SERVICE k1
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -14,7 +16,7 @@
                 &kp TAB     LCH(A)      LAH(S)      LGH(D)      LSH(F)      &kp G     /* encoder */   /* encoder */ &kp H       RSH(J)      RGH(K)       RAH(L)     RCHQ        &kp RET
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤           │   │           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
             /*│   shift   │     Z     │     X     │     C     │     V     │     B     │   MUTE    │   │           │     N     │     M     │     ,;    │     .:    │     ?!    │   shift   │*/
-                &kp LSHIFT  &kp Z       &kp X       &kp C       &kp V       &kp B       &kp MUTE  /* */ &terminal   &kp N       &kp M       &com2       &dot2       &quex       &kp RSHIFT
+                &kp LSHIFT  &kp Z       &kp X       &kp C       &kp V       &kp B       SER(MUTE) /* */ RGH(RET)    &kp N       &kp M       &com2       &dot2       &quex       &kp RSHIFT
             /*╰───────────┴───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┴───────────╯*/
             /*                        │    ctrl   │    alt    │    cmd    │   lower   │   shift   │   │   space   │   raise   │    cmd    │    alt    │    ctrl   │                        */
                                         &kp LCTRL   &kp LALT    &kp LGUI    &mo LOWER   &kp LSHIFT/* */ &kp SPACE   &mo RAISE   &kp RGUI    &kp RALT    &kp RCTRL
@@ -23,7 +25,7 @@
             >;
 
             sensor-bindings = <
-                &inc_dec_kp VOL_DN VOL_UP &inc_dec_kp BRI_DN BRI_UP
+                &inc_dec_kp VOL_DN VOL_UP &inc_dec_kp LS(TAB) TAB
             >;
         };
 
@@ -36,14 +38,14 @@
             /*│     ~     │     1     │     2     │     3     │     4     │     5     │                           │     6     │     7     │     8     │     9     │     0     │     €     │*/
                 &kp TILDE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5    /*                         */ &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &euro
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-            /*│     #     │     &     │     <     │     {     │     (     │     [     ├───────────╮   ╭───────────┤     /     │     *     │     -     │     +     │     ^     │     £      */
+            /*│     #     │     &     │     <     │     {     │     (     │     [     ├───────────╮   ╭───────────┤     /     │     *     │     -     │     +     │     ^     │     £     │*/
                 &kp HASH    LCH(AMPS)   LAH(LT)     LGH(LBRC)   LSH(LPAR)   &kp LBKT  /* encoder */   /* encoder */ &kp FSLH    RSH(ASTRK)  RGH(MINUS)  RAH(PLUS)   RCH(CARET)  &pound
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤           │   │           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
             /*│   shift   │     |     │     >     │     }     │     )     │     ]     │   MUTE    │   │           │     \     │     %     │     _     │     =     │     $     │   shift   │*/
                 &kp LSHIFT  &kp PIPE    &kp GT      &kp RBRC    &kp RPAR    &kp RBKT    &kp MUTE  /* */ &terminal2  &kp BSLH    &kp PRCNT   &kp UNDER   &kp EQUAL   &kp DLLR    &kp RSHIFT
             /*╰───────────┴───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┴───────────╯*/
             /*                        │   reset   │ bootloader│           │    [x]    │           │   │   space   │   raise   │    cmd    │    alt    │    ctrl   │                        */
-                                        RESET       BOOT_L      &none       &none       &none     /* */ &kp SPACE   &mo RAISE   &kp RGUI    &kp RALT    &kp RCTRL
+                                        RESET       BOOT_L      &bt BT_CLR  &none       &none     /* */ &kp SPACE   &mo RAISE   &kp RGUI    &kp RALT    &kp RCTRL
             /*                        ╰───────────┴───────────┴───────────┴───────────┤           │   │           ├───────────┴───────────┴───────────┴───────────╯                        */
             /*                                                                        ╰───────────╯   ╰───────────╯                                                                        */
             >;
@@ -69,13 +71,39 @@
                 &kp LSHIFT  &none       &cut        &copy       &paste      &none       &kp MUTE  /* */ &terminal   &none       &none       &none       &none       &none       &kp RSHIFT
             /*╰───────────┴───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┴───────────╯*/
             /*                        │    ctrl   │    alt    │    cmd    │   lower   │   shift   │   │           │    [x]    │           │ bootloader│   reset   │                        */
-                                        &kp LCTRL   &kp LALT    &kp LGUI    &mo LOWER   &kp LSHIFT/* */ &none       &none       &none       BOOT_L      RESET
+                                        &kp LCTRL   &kp LALT    &kp LGUI    &mo LOWER   &kp LSHIFT/* */ &none       &none       &bt BT_CLR  BOOT_L      RESET
             /*                        ╰───────────┴───────────┴───────────┴───────────┤           │   │           ├───────────┴───────────┴───────────┴───────────╯                        */
             /*                                                                        ╰───────────╯   ╰───────────╯                                                                        */
             >;
 
             sensor-bindings = <
                 &inc_dec_kp VOL_DN VOL_UP &inc_dec_kp BRI_DN BRI_UP
+            >;
+        };
+
+        service {
+            bindings = <
+            /*╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮                           ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮*/
+            /*│           │           │           │           │           │           │                           │           │           │           │           │           │           │*/
+                &bt BT_CLR  &kp BRI_DN  &kp BRI_UP  &kp MUTE    &kp VOL_DN  &kp VOL_UP/*                         */ &none       &none       &none       &none       &none       &none
+            /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
+            /*│  terminal │ screenshot│ screencut │ prev song │ play/pause│ next song │                           │           │    <<<    │    vvv    │    ^^^    │    >>>    │           │*/
+                &terminal   &scrnshot   &scrncut    &kp C_PREV  &kp C_PP    &kp C_NEXT/*                         */ &none       &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none
+            /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
+            /*│ terminal2 │    ctrl   │    alt    │    cmd    │   shift   │ CAPS word ├───────────╮   ╭───────────┤           │     <     │     v     │     ^     │     >     │           │*/
+                &terminal2  &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHIFT  &caps_word/* encoder */   /* encoder */ &none       &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &none
+            /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤           │   │           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
+            /*│   shift   │           │    cut    │    copy   │   paste   │           │   MUTE    │   │           │           │           │           │           │           │   shift   │*/
+                &kp LSHIFT  &none       &cut        &copy       &paste      &none       &kp MUTE  /* */ &terminal   &none       &none       &none       &none       &none       &kp RSHIFT
+            /*╰───────────┴───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┴───────────╯*/
+            /*                        │    ctrl   │    alt    │    cmd    │   lower   │   shift   │   │           │    [x]    │           │ bootloader│   reset   │                        */
+                                        &kp LCTRL   &kp LALT    &kp LGUI    &mo LOWER   &kp LSHIFT/* */ &none       &none       &none       BOOT_L      RESET
+            /*                        ╰───────────┴───────────┴───────────┴───────────┤           │   │           ├───────────┴───────────┴───────────┴───────────╯                        */
+            /*                                                                        ╰───────────╯   ╰───────────╯                                                                        */
+            >;
+
+            sensor-bindings = <
+                &inc_dec_kp BRI_DN BRI_UP &inc_dec_kp BRI_DN BRI_UP
             >;
         };
     };
