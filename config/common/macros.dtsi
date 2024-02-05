@@ -1,10 +1,7 @@
-#include <dt-bindings/zmk/keys.h>
-
 / {
     macros {
         // CURRENCIES
         euro: euro {
-            label = "ZM_euro";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -14,7 +11,6 @@
                 ;
         };
         pound: pound {
-            label = "ZM_pound";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -24,8 +20,27 @@
                 ;
         };
         // SYSTEM
-        terminal: terminal {
-            label = "ZM_terminal";
+        sptlght: sptlght {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp SPACE>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        lock: lock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp Q>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        term: term {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -34,8 +49,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        terminal2: terminal2 {
-            label = "ZM_terminal2";
+        termf: termf {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -47,7 +61,6 @@
                 ;
         };
         scrnshot: scrnshot {
-            label = "ZM_scrnshot";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -59,7 +72,6 @@
                 ;
         };
         scrncut: scrncut {
-            label = "ZM_scrncut";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -70,39 +82,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        cut: cut {
-            label = "ZM_cut";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp X>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        copy: copy {
-            label = "ZM_copy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp Z>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        paste: paste {
-            label = "ZM_paste";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp V>
-                , <&macro_release &kp LGUI>
-                ;
-        };
         // ANDROID STUDIO
         a_run: a_run {
-            label = "ZM_android_studio_run";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -114,7 +95,6 @@
                 ;
         };
         a_debug: a_debug {
-            label = "ZM_android_studio_debug";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -126,7 +106,6 @@
                 ;
         };
         a_dbp: a_dbp {
-            label = "ZM_android_studio_debug_break_point";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -136,7 +115,6 @@
                 ;
         };
         a_dbps: a_dbps {
-            label = "ZM_android_studio_debug_break_points";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -148,7 +126,6 @@
                 ;
         };
         a_all: a_all {
-            label = "ZM_android_studio_find_all";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -160,7 +137,6 @@
                 ;
         };
         a_action: a_action {
-            label = "ZM_android_studio_find_action";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -172,7 +148,6 @@
                 ;
         };
         a_files: a_files {
-            label = "ZM_android_studio_find_file";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -184,7 +159,6 @@
                 ;
         };
         a_class: a_class {
-            label = "ZM_android_studio_find_class";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -194,7 +168,6 @@
                 ;
         };
         a_sdown: a_sdown {
-            label = "ZM_android_studio_split_down";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -204,7 +177,6 @@
                 ;
         };
         a_sup: a_sup {
-            label = "ZM_android_studio_split_up";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -214,7 +186,6 @@
                 ;
         };
         a_rf: a_rf {
-            label = "ZM_android_studio_recent_files";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -224,7 +195,6 @@
                 ;
         };
         a_rl: a_rl {
-            label = "ZM_android_studio_recent_locations";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -236,7 +206,6 @@
                 ;
         };
         a_tree: a_tree {
-            label = "ZM_android_studio_project_tree";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -246,7 +215,6 @@
                 ;
         };
         a_logc: a_logc {
-            label = "ZM_android_studio_logcat";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -256,7 +224,6 @@
                 ;
         };
         a_logd: a_logd {
-            label = "ZM_android_studio_debug_log";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -266,7 +233,6 @@
                 ;
         };
         a_term: a_term {
-            label = "ZM_android_studio_terminal";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -276,7 +242,6 @@
                 ;
         };
         a_back: a_back {
-            label = "ZM_android_studio_back";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -287,7 +252,6 @@
                 
         };
         a_forward: a_forward {
-            label = "ZM_android_studio_forward";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -297,7 +261,6 @@
                 ;
         };
         a_usage: a_usage {
-            label = "ZM_android_studio_usage_file";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings

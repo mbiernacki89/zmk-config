@@ -10,8 +10,8 @@
 #define FUN 4
 
 #include "common/aliases.dtsi"
-#include "common/behaviors.dtsi"
 #include "common/macros.dtsi"
+#include "common/behaviors.dtsi"
 #include "corne/combos.dtsi"
 #include "corne/conditional_layers.dtsi"
 #include "corne/keymap.dtsi"

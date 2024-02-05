@@ -8,11 +8,21 @@
 #define LCH(k1) &hm LCTRL k1
 #define LAH(k1) &hm LALT k1
 #define LGH(k1) &hm LGUI k1
+#define LMH(k1) &hm LMEH k1
+#define LHH(k1) &hm LHPR k1
 
 #define RSH(k1) &hm RSHIFT k1
 #define RCH(k1) &hm RCTRL k1
 #define RAH(k1) &hm RALT k1
 #define RGH(k1) &hm RGUI k1
+#define RMH(k1) &hm RMEH k1
+#define RHH(k1) &hm RHPR k1
+
+
+#define LMEH LC(LA(LSHIFT))
+#define RMEH RC(RA(RSHIFT))
+#define LHPR LC(LA(LG(LSHIFT)))
+#define RHPR RC(RA(RG(RSHIFT)))
 
 #define RESET &sys_reset
 #define BOOT_L &bootloader
