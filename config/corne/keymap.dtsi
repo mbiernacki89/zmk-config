@@ -32,7 +32,7 @@
                 &none   &kp PIPE    &kp GT      &kp RBRC    &kp RPAR    &kp RBKT  /*                         */ &kp BSLH    &kp PRCNT   &kp UNDER   &kp CARET   &kp HASH    &none
             /*╰───────╰───────────┴───────────┼───────────┼───────────┼───────────┼───────────╮   ╭───────────┼───────────┼───────────┼───────────┼───────────┴───────────╯───────╯*/
             /*                                            │           │           │           │   │           │  ~        │  @        │                                            */
-                                                            &none       &none       &kp LSHIFT/* */ &kp SPACE   &kp TILDE   &kp AT
+                                                            &bt BT_CLR  &none       &kp LSHIFT/* */ &kp SPACE   &kp TILDE   &kp AT
             /*                                            ╰───────────┴───────────┤           │   │           ├───────────┴───────────╯                                            */
             /*                                                                    ╰───────────╯   ╰───────────╯                                                                    */
             >;
@@ -41,7 +41,7 @@
             bindings = <
             /*╭───────╭───────────┬───────────┬───────────┬───────────┬───────────╮                           ╭───────────┬───────────┬───────────┬───────────┬───────────╮───────╮*/
             /*│       │           │           │           │           │           │                           │           │           │           │           │           │       │*/
-                &none   &terminal   &scrnshot   &scrncut    &none       &none     /*                         */ &kp ESC     &kp PG_DN    &kp UP     &kp PG_UP   &kp BSPC    &none
+                &none   &term       &scrnshot   &scrncut    &none       &none     /*                         */ &kp ESC     &kp PG_DN    &kp UP     &kp PG_UP   &kp BSPC    &none
             /*├───────├───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┤───────┤*/
             /*│       │           │           │           │           │           │                           │           │           │           │           │           │       │*/
                 &none   &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHIFT  &caps_word/*                         */ &kp TAB     &kp LEFT    &kp DOWN    &kp RIGHT   &kp RET     &none
@@ -50,7 +50,7 @@
                 &none   &none       &euro       &kp DLLR    &pound      &none     /*                         */ &kp Q       &kp HOME    &kp END     &none       &kp DEL     &none
             /*╰───────╰───────────┴───────────┼───────────┼───────────┼───────────┼───────────╮   ╭───────────┼───────────┼───────────┼───────────┼───────────┴───────────╯───────╯*/
             /*                                            │           │           │           │   │           │           │           │                                            */
-                                                            &none       &none       &none     /* */ &none       &none       &none
+                                                            &none       &none       &none     /* */ &none       &none       &bt BT_CLR
             /*                                            ╰───────────┴───────────┤           │   │           ├───────────┴───────────╯                                            */
             /*                                                                    ╰───────────╯   ╰───────────╯                                                                    */
             >;
@@ -59,7 +59,7 @@
             bindings = <
             /*╭───────╭───────────┬───────────┬───────────┬───────────┬───────────╮                           ╭───────────┬───────────┬───────────┬───────────┬───────────╮───────╮*/
             /*│       │           │           │           │           │           │                           │           │           │           │           │           │       │*/
-                &none   &terminal   &scrnshot   &scrncut    &none       &none     /*                         */ &a_tree     &a_logc     &a_logd     &a_usage    &a_term     &none
+                &none   &term       &scrnshot   &scrncut    &none       &none     /*                         */ &a_tree     &a_logc     &a_logd     &a_usage    &a_term     &none
             /*┼───────├───────────├───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┤───────┤*/
             /*│       │           │           │           │           │           │                           │           │           │           │           │           │       │*/
                 &none   &kp BRI_DN  &kp BRI_UP  &kp VOL_DN  &kp VOL_UP  &kp MUTE  /*                         */ &a_all      &a_action   &a_files    &a_class    &a_sup      &none

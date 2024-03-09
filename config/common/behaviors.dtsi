@@ -2,7 +2,6 @@
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <160>;
@@ -11,7 +10,6 @@
         };
         hmq: homerow_quote {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_QUOTE";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <160>;
@@ -20,31 +18,45 @@
         };
         com2: comma_semicolon {
             compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_SEMICOLON";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         dot2: dot_colon {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_COLON";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         quex: question_exclamation {
             compatible = "zmk,behavior-mod-morph";
-            label = "QUESTION_EXCLAMATION";
             #binding-cells = <0>;
             bindings = <&kp QMARK>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        tiat: tilde_at {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE>, <&kp AT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        athsh: at_hash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp AT>, <&kp HASH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         qtg: quote_grave {
             compatible = "zmk,behavior-mod-morph";
-            label = "QUOTE_GRAVE";
             #binding-cells = <0>;
             bindings = <&kp SQT>, <&kp GRAVE>;
             mods = <(MOD_LALT|MOD_RALT)>;
+        };
+        termtog: termtog {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&term>, <&termf>;
         };
     };
 };

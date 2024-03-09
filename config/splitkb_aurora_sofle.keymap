@@ -5,11 +5,11 @@
 #define DEFAULT 0
 #define LOWER 1
 #define RAISE 2
-#define SERVICE 3
+#define CODE 3
+#define SERVICE 4
 
 #include "common/aliases.dtsi"
-#include "common/behaviors.dtsi"
 #include "common/macros.dtsi"
-#include "sofle/combos.dtsi"
-#include "sofle/conditional_layers.dtsi"
+#include "common/behaviors.dtsi"
+
 #include "sofle/keymap.dtsi"
