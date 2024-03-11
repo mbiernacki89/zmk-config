@@ -4,10 +4,10 @@
 
 // Layers
 #define QWR 0
-#define SYM 1
-#define NAV 2
-#define SYS 3
-#define FUN 4
+#define NAV 1
+#define NUM 2
+#define SYM 3
+#define SYS 4
 
 #include "common/aliases.dtsi"
 #include "common/macros.dtsi"
