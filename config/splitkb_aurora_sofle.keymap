@@ -4,8 +4,8 @@
 
 #define QWR 0
 #define NAV 1
-#define NUM 2
-#define SYM 3
+#define SYM 2
+#define NUM 3
 #define SYS 4
 
 #include "common/aliases.dtsi"
