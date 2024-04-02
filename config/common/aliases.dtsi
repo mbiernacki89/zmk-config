@@ -27,4 +27,6 @@
 #define RESET &sys_reset
 #define BOOT_L &bootloader
 
+#define RP &key_repeat
+
 #define RCHQ &hmq RCTRL 0

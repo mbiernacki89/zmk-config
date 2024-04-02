@@ -3,10 +3,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define QWR 0
-#define NAV 1
-#define SYM 2
-#define NUM 3
-#define SYS 4
+#define LWR 1
+#define RSE 2
+#define UTL 3
 
 #include "common/aliases.dtsi"
 #include "common/macros.dtsi"
