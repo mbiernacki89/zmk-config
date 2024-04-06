@@ -7,13 +7,6 @@
               ╰────────────╯ ╰────────────╯            
 */
 
-#define COMBO(NAME, BINDINGS, KEYPOS) \
-    combo_##NAME { \
-        timeout-ms = <50>; \
-        key-positions = <KEYPOS>; \
-        bindings = <BINDINGS>; \
-    };
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -27,6 +20,11 @@
             key-positions = <16 17>;
             bindings = <&kp TAB>;
         };
+        combo_caps_word {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&caps_word>;
+        };
         combo_bspc {
             timeout-ms = <50>;
             key-positions = <6 7>;
@@ -39,7 +37,7 @@
         };
         combo_del {
             timeout-ms = <50>;
-            key-positions = <39 40>;
+            key-positions = <30 31>;
             bindings = <&kp DEL>;
         };
     };

@@ -11,3 +11,4 @@
 #include "common/macros.dtsi"
 #include "common/behaviors.dtsi"
 #include "corne/keymap.dtsi"
+#include "corne/combos.dtsi"

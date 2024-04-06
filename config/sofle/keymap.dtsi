@@ -10,7 +10,7 @@
             /*│    esc    │     Q     │     W     │     E     │     R     │     T     │                           │     Y     │     U     │     I     │     O     │     P     │ backspace │*/
                 &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp T     /*                         */ &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-            /*│    tab    │     A     │     S     │     D     │     F     │     G     ├───────────╮   ╭───────────┤     H     │     J     │     K     │     L     │     "     │   enter   │*/
+            /*│    tab    │     A     │     S     │     D     │     F     │     G     ├───────────╮   ╭───────────┤     H     │     J     │     K     │     L     │     '     │   enter   │*/
                 &kp TAB     LCH(A)      LAH(S)      LGH(D)      LSH(F)      LHH(G)    /* encoder */   /* encoder */ RHH(H)      RSH(J)      RGH(K)      RAH(L)      RCH(SQT)    &kp RET
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤           │   │           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
             /*│ CAPS word │     Z     │     X     │     C     │     V     │     B     │   MUTE    │   │   MUTE    │     N     │     M     │     ,     │     .     │     ?     │  delete   │*/
@@ -57,14 +57,14 @@
             /*│           │           │           │           │           │           │                           │           │           │           │           │           │           │*/
                 &none       &none       &none       &none       &none       &none     /*                         */ &none       &none       &none       &none       &none       &none
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-            /*│           │     1     │     2     │     3     │     4     │     5     │                           │     6     │     7     │     8     │     9     │     0     │           │*/
-                &none       &kp N1      &kp N2      &kp N3      &kp N4      &kp N5    /*                         */ &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &none
+            /*│           │     1     │     2     │     3     │     4     │     5     │                           │     6     │     7     │     8     │     9     │     0     │ backspace │*/
+                &none       &kp N1      &kp N2      &kp N3      &kp N4      &kp N5    /*                         */ &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp BSPC
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-            /*│           │    ctrl   │    alt    │    cmd    │   shift   │ CAPS word ├───────────╮   ╭───────────┤     <     │     v     │     ^     │     >     │           │           │*/
-                &none       &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHIFT  &caps_word/* encoder */   /* encoder */ &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &none       &none
+            /*│           │    ctrl   │    alt    │    cmd    │   shift   │ CAPS word ├───────────╮   ╭───────────┤     <     │     v     │     ^     │     >     │   enter   │   enter   │*/
+                &none       &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHIFT  &caps_word/* encoder */   /* encoder */ &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET     &kp RET
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤           │   │           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-            /*│           │           │           │           │           │           │   MUTE    │   │           │ backspace │   enter   │    tab    │    esc    │   delete  │           │*/
-                &none       &none       &none       &none       &none       RP          &bt BT_CLR/* */ &kp C_PP    &kp BSPC    &kp RET     &kp TAB     &kp ESC     &kp DEL     &none
+            /*│           │           │           │           │           │           │   MUTE    │   │           │ backspace │   enter   │    tab    │    esc    │   delete  │  delete   │*/
+                &none       &none       &none       &none       &none       RP          &bt BT_CLR/* */ &kp C_PP    &kp BSPC    &kp RET     &kp TAB     &kp ESC     &kp DEL     &kp DEL
             /*╰───────────┴───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┴───────────╯*/
             /*                        │           │           │           │           │           │   │           │[activator]│           │ bootloader│   reset   │                        */
                                         &trans      &trans      &trans      &trans      &trans    /* */ &none       &none       &none       BOOT_L      RESET
