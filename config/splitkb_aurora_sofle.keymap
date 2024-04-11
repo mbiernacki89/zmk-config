@@ -5,7 +5,8 @@
 #define QWR 0
 #define LWR 1
 #define RSE 2
-#define UTL 3
+#define TRD 3
+#define UTL 4
 
 #include "common/aliases.dtsi"
 #include "common/macros.dtsi"
