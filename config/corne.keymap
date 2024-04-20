@@ -106,6 +106,8 @@
 
     combos {
         compatible = "zmk,combos";
+
+        // left side
         combo_esc {
             timeout-ms = <50>;
             key-positions = <3 4>;
@@ -116,25 +118,34 @@
             key-positions = <15 16>;
             bindings = <&kp TAB>;
         };
-        combo_caps_word {
-            timeout-ms = <50>;
-            key-positions = <27 28>;
-            bindings = <&caps_word>;
-        };
-        combo_bspc {
+        
+       	// right side
+        combo_backspace {
             timeout-ms = <50>;
             key-positions = <7 8>;
             bindings = <&kp BSPC>;
         };
-        combo_ret {
+        combo_delete {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp DEL>;
+        };
+        combo_return {
             timeout-ms = <50>;
             key-positions = <19 20>;
             bindings = <&kp RET>;
         };
-        combo_del {
+        combo_space {
             timeout-ms = <50>;
             key-positions = <31 32>;
             bindings = <&kp DEL>;
+        };
+
+        // both
+        combo_caps_word {
+            timeout-ms = <50>;
+            key-positions = <16 19>;
+            bindings = <&caps_word>;
         };
     };
 };
