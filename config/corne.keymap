@@ -46,11 +46,11 @@
         raise {
             bindings = <
             /*╭───────╭───────────┬───────────┬───────────┬───────────┬───────────╮                           ╭───────────┬───────────┬───────────┬───────────┬───────────╮───────╮*/
-                &none   &euro       &kp MINUS   &kp PLUS    &kp PIPE    &kp CARET /*                         */ &kp LBRC    &kp RBRC    &kp LT      &kp GT      &kp GRAVE   &none
+                &none   &kp NUBS    &kp MINUS   &kp PLUS    &kp PIPE    &kp CARET /*                         */ &kp LBRC    &kp RBRC    &kp LT      &kp GT      &kp GRAVE   &none
             /*├───────├───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┤───────┤*/
                 &none   LCH(TILDE)  LAH(FSLH)   LGH(ASTRK)  LSH(BSLH)   LHH(PRCNT)/*                         */ RHH(LPAR)   RSH(RPAR)   RGH(AT)     RAH(HASH)   RCH(DQT)    &none
             /*├───────├───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┤───────┤*/
-                &none   &pound      &kp UNDER   &kp EQUAL   LMH(AMPS)   &kp DLLR  /*                         */ &kp LBKT    RMH(RBKT)   &kp SEMI    &kp COLON   &kp EXCL    &none
+                &none   &euro       &kp UNDER   &kp EQUAL   LMH(AMPS)   &kp DLLR  /*                         */ &kp LBKT    RMH(RBKT)   &kp SEMI    &kp COLON   &kp EXCL    &none
             /*╰───────╰───────────┴───────────┴───────────┼───────────┼───────────┼───────────╮   ╭───────────┼───────────┼───────────┼───────────┴───────────┴───────────╯───────╯*/
                                                             &trans      &trans      &trans    /* */ &none       &none       &none
             /*                                            ╰───────────┴───────────┤           │   │           ├───────────┴───────────╯                                            */
