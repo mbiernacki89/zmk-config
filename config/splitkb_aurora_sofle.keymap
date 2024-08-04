@@ -5,8 +5,7 @@
 #define QWR 0
 #define LWR 1
 #define RSE 2
-#define TRD 3
-#define UTL 4
+#define CMB 3
 
 #include "common/aliases.dtsi"
 #include "common/macros.dtsi"
@@ -18,15 +17,15 @@
         qwerty {
             bindings = <
             /*╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮                           ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮*/
-                &kp NUBS    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5    /*                         */ &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &none
+                &kp NUBS    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5    /*                         */ &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp DEL
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
                 &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp T     /*                         */ &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
                 &kp TAB     LCH(A)      LAH(S)      LGH(D)      LSH(F)      LHH(G)    /*                         */ RHH(H)      RSH(J)      RGH(K)      RAH(L)      RCH(SQT)    &kp RET
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤───────────╮   ╭───────────├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-                &caps_word  &kp Z       &kp X       &kp C       LMH(V)      &kp B       &kp MUTE  /* */ &kp MUTE    &kp N       RMH(M)      &kp COMMA   &kp DOT     &kp QMARK   &kp DEL
+                &kp LSHIFT  &kp Z       &kp X       &kp C       LMH(V)      &kp B       &kp MUTE  /* */ &kp MUTE    &kp N       RMH(M)      &kp COMMA   &kp DOT     &kp QMARK   &kp RSHIFT
             /*╰───────────┴───────────┼───────────┼───────────┼───────────┼───────────┼───────────╮   ╭───────────┼───────────┼───────────┼───────────┼───────────┼───────────┴───────────╯*/
-                                        &none       &none       &mo TRD     &mo LWR     &kp LSHIFT/* */ &kp SPACE   &mo RSE     &kp LALT    &none       &none
+                                        &kp LCTRL   &kp LGUI    &kp LALT    &mo LWR     &kp LSHIFT/* */ &kp SPACE   &mo RSE     &kp RALT    &kp RGUI    &kp RCTRL
             /*                        ╰───────────┴───────────┴───────────┴───────────┤           │   │           ├───────────┴───────────┴───────────┴───────────╯                        */
             /*                                                                        ╰───────────╯   ╰───────────╯                                                                        */
             >;
@@ -38,13 +37,13 @@
         lower {
             bindings = <
             /*╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮                           ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮*/
-                &none       &none       &none       &none       &none       &none     /*                         */ &none       &none       &none       &none       &none       &none
+                &kp NUBS    &kp BRI_DN  &kp BRI_UP  &kp VOL_DN  &kp VOL_UP  &kp MUTE  /*                         */ &none       &kp C_PREV  &kp C_PP    &kp C_NEXT  &none       &kp DEL
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-                &none       &kp BRI_DN  &kp BRI_UP  &kp VOL_DN  &kp VOL_UP  &kp MUTE  /*                         */ &none       &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp BSPC    &kp BSPC
+                &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5    /*                         */ &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp BSPC
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-                &none       &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHIFT  &caps_word/*                         */ &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET     &kp RET
+                &kp TAB     &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHIFT  &caps_word/*                         */ &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &none       &kp RET
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤───────────╮   ╭───────────├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-                &none       &none       &none       &scrnshot   &scrncut    &none       &none     /* */ &none       &kp ESC     &kp TAB     &none       &none       &kp DEL     &kp DEL
+                &kp LSHIFT  &none       &none       &scrnshot   &scrncut    &none       &none     /* */ &none       &none       &none       &none       &none       &none       &kp RSHIFT
             /*╰───────────┴───────────┼───────────┼───────────┼───────────┼───────────┼───────────╮   ╭───────────┼───────────┼───────────┼───────────┼───────────┼───────────┴───────────╯*/
                                         RESET       BOOT_L      &none       &none       &none     /* */ &kp SPACE   &trans      &trans      &trans      &trans
             /*                        ╰───────────┴───────────┴───────────┴───────────┤           │   │           ├───────────┴───────────┴───────────┴───────────╯                        */
@@ -58,13 +57,13 @@
         raise {
             bindings = <
             /*╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮                           ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮*/
-                &none       &none       &none       &none       &none       &none     /*                         */ &none       &none       &none       &none       &none       &none
+                &kp NUBS    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5    /*                         */ &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp DEL
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
                 &kp ESC     &euro       &kp MINUS   &kp PLUS    &kp PIPE    &kp CARET /*                         */ &kp LBRC    &kp RBRC    &kp LT      &kp GT      &kp GRAVE   &kp BSPC
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
                 &kp TAB     LCH(TILDE)  LAH(FSLH)   LGH(ASTRK)  LSH(BSLH)   LHH(PRCNT)/*                         */ RHH(LPAR)   RSH(RPAR)   RGH(AT)     RAH(HASH)   RCH(DQT)    &kp RET
             /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤───────────╮   ╭───────────├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-                &none       &pound      &kp UNDER   &kp EQUAL   LMH(AMPS)   &kp DLLR    &none     /* */ &none       &kp LBKT    RMH(RBKT)   &kp SEMI    &kp COLON   &kp EXCL    &kp DEL
+                &kp LSHIFT  &pound      &kp UNDER   &kp EQUAL   LMH(AMPS)   &kp DLLR    &none     /* */ &none       &kp LBKT    RMH(RBKT)   &kp SEMI    &kp COLON   &kp EXCL    &kp DEL
             /*╰───────────┴───────────┼───────────┼───────────┼───────────┼───────────┼───────────╮   ╭───────────┼───────────┼───────────┼───────────┼───────────┼───────────┴───────────╯*/
                                         &trans      &trans      &trans      &trans      &trans    /* */ &none       &none       &none       BOOT_L      RESET
             /*                        ╰───────────┴───────────┴───────────┴───────────┤           │   │           ├───────────┴───────────┴───────────┴───────────╯                        */
@@ -75,7 +74,7 @@
                 &inc_dec_kp BRI_DN BRI_UP &inc_dec_kp C_PREV C_NEXT
             >;
         };
-        third {
+        combo {
             bindings = <
             /*╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮                           ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮*/
                 &none       &none       &none       &none       &none       &none     /*                         */ &none       &none       &none       &none       &none       &none
@@ -95,33 +94,63 @@
                 &inc_dec_kp BRI_DN BRI_UP &inc_dec_kp VOL_DN VOL_UP
             >;
         };
-        utils {
-            bindings = <
-            /*╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮                           ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮*/
-                &none       &none       &none       &none       &none       &none     /*                         */ &none       &none       &none       &none       &none       &none
-            /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-                &none       &kp BRI_DN  &kp BRI_UP  &kp VOL_DN  &kp VOL_UP  &kp MUTE  /*                         */ &none       &kp C_PREV  &kp C_PP    &kp C_NEXT  &lock       &none
-            /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                           ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-                &none       &none       &none       &none       &none       &none     /*                         */ &none       &none       &none       &none       &none       &none
-            /*├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤───────────╮   ╭───────────├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-                &none       &none       &none       &scrnshot   &scrncut    &none       &none     /* */ &none       &none       &none       &bt BT_PRV  &bt BT_NXT  &bt BT_CLR  &none
-            /*╰───────────┴───────────┼───────────┼───────────┼───────────┼───────────┼───────────╮   ╭───────────┼───────────┼───────────┼───────────┼───────────┼───────────┴───────────╯*/
-                                        &none       &none       &none       &none       &none     /* */ &none       &none       &none       &none       &none
-            /*                        ╰───────────┴───────────┴───────────┴───────────┤           │   │           ├───────────┴───────────┴───────────┴───────────╯                        */
-            /*                                                                        ╰───────────╯   ╰───────────╯                                                                        */
-            >;
-
-            sensor-bindings = <
-                &inc_dec_kp BRI_DN BRI_UP &inc_dec_kp VOL_DN VOL_UP
-            >;
-        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
         system_layer {
             if-layers = <LWR RSE>;
-            then-layer = <UTL>;
+            then-layer = <CMB>;
+        };
+    };
+
+     /*
+      ╭────────────────────────╮         ╭────────────────────────╮
+      │  0   1   2   3   4   5 │         │  6   7   8   9  10  11 │
+      │ 12  13  14  15  16  17 │         │ 18  19  20  21  22  23 │
+      │ 24  25  26  27  28  29 ╰───╮ ╭───╯ 30  31  32  33  34  35 │
+      │ 36  37  38  39  40  41  42 │ │ 43  44  45  46  47  48  49 │
+      ╰───────╮ 50  51  52  53  54 │ │ 55  56  57  58  59 ╭───────╯
+              ╰────────────────────╯ ╰────────────────────╯            
+    */
+
+    combos {
+        compatible = "zmk,combos";
+
+        // left side
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp ESC>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <39 40>;
+            bindings = <&kp TAB>;
+        };
+        
+        // right side
+        combo_backspace {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&kp BSPC>;
+        };
+        combo_delete {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp DEL>;
+        };
+        combo_return {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&kp RET>;
+        };
+
+        // both
+        combo_caps_word {
+            timeout-ms = <50>;
+            key-positions = <28 31>;
+            bindings = <&caps_word>;
         };
     };
 };
